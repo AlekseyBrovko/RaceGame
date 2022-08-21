@@ -990,7 +990,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.0206987, y: 1}
+    m_SensorSize: {x: 0.45908716, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1026,7 +1026,7 @@ GameObject:
   - component: {fileID: 1285497329}
   - component: {fileID: 1285497330}
   - component: {fileID: 1285497331}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WheelColliderRightBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1067,16 +1067,16 @@ WheelCollider:
   m_Mass: 20
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
-    m_ExtremumSlip: 0.4
-    m_ExtremumValue: 1
+    m_ExtremumSlip: 4
+    m_ExtremumValue: 6
     m_AsymptoteSlip: 0.8
     m_AsymptoteValue: 0.5
     m_Stiffness: 1
   m_SidewaysFriction:
-    m_ExtremumSlip: 0.2
-    m_ExtremumValue: 1
-    m_AsymptoteSlip: 0.5
-    m_AsymptoteValue: 0.75
+    m_ExtremumSlip: 0.8
+    m_ExtremumValue: 1.4
+    m_AsymptoteSlip: 0.8
+    m_AsymptoteValue: 1.2
     m_Stiffness: 1
   m_Enabled: 1
 --- !u!114 &1285497331
@@ -1105,7 +1105,7 @@ GameObject:
   - component: {fileID: 1304852926}
   - component: {fileID: 1304852927}
   - component: {fileID: 1304852928}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WheelColliderRightFront
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1146,16 +1146,16 @@ WheelCollider:
   m_Mass: 20
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
-    m_ExtremumSlip: 0.4
-    m_ExtremumValue: 1
+    m_ExtremumSlip: 4
+    m_ExtremumValue: 6
     m_AsymptoteSlip: 0.8
     m_AsymptoteValue: 0.5
     m_Stiffness: 1
   m_SidewaysFriction:
-    m_ExtremumSlip: 0.2
-    m_ExtremumValue: 1
-    m_AsymptoteSlip: 0.5
-    m_AsymptoteValue: 0.75
+    m_ExtremumSlip: 4
+    m_ExtremumValue: 8
+    m_AsymptoteSlip: 2
+    m_AsymptoteValue: 4
     m_Stiffness: 1
   m_Enabled: 1
 --- !u!114 &1304852928
@@ -1426,6 +1426,8 @@ GameObject:
   - component: {fileID: 1824924278}
   - component: {fileID: 1824924280}
   - component: {fileID: 1824924279}
+  - component: {fileID: 1824924282}
+  - component: {fileID: 1824924281}
   m_Layer: 0
   m_Name: BodyColliders
   m_TagString: Untagged
@@ -1456,7 +1458,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1824924277}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: c77e9a4cb816354438a877bda01ea04c, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -1469,12 +1471,40 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1824924277}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: c77e9a4cb816354438a877bda01ea04c, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.179529, y: 0.54204106, z: 2.3283005}
-  m_Center: {x: 0.008160372, y: -0.18817762, z: -0.06423155}
+  m_Size: {x: 1.179529, y: 0.54204106, z: 1.7033259}
+  m_Center: {x: 0.008160372, y: -0.18817762, z: -0.019201387}
+--- !u!136 &1824924281
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1824924277}
+  m_Material: {fileID: 13400000, guid: c77e9a4cb816354438a877bda01ea04c, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.2977306
+  m_Height: 1.23
+  m_Direction: 0
+  m_Center: {x: 0.0030463436, y: -0.17, z: -0.96}
+--- !u!136 &1824924282
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1824924277}
+  m_Material: {fileID: 13400000, guid: c77e9a4cb816354438a877bda01ea04c, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.2977306
+  m_Height: 1.23
+  m_Direction: 0
+  m_Center: {x: 0.0030463436, y: -0.17, z: 0.89}
 --- !u!1 &1845063161
 GameObject:
   m_ObjectHideFlags: 0
@@ -1486,7 +1516,7 @@ GameObject:
   - component: {fileID: 1845063162}
   - component: {fileID: 1845063163}
   - component: {fileID: 1845063164}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WheelColliderLeftBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1527,16 +1557,16 @@ WheelCollider:
   m_Mass: 20
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
-    m_ExtremumSlip: 0.4
-    m_ExtremumValue: 1
+    m_ExtremumSlip: 4
+    m_ExtremumValue: 6
     m_AsymptoteSlip: 0.8
     m_AsymptoteValue: 0.5
     m_Stiffness: 1
   m_SidewaysFriction:
-    m_ExtremumSlip: 0.2
-    m_ExtremumValue: 1
-    m_AsymptoteSlip: 0.5
-    m_AsymptoteValue: 0.75
+    m_ExtremumSlip: 0.8
+    m_ExtremumValue: 1.4
+    m_AsymptoteSlip: 0.8
+    m_AsymptoteValue: 1.2
     m_Stiffness: 1
   m_Enabled: 1
 --- !u!114 &1845063164
@@ -1660,7 +1690,7 @@ GameObject:
   - component: {fileID: 2021358466}
   - component: {fileID: 2021358467}
   - component: {fileID: 2021358468}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WheelColliderLeftFront
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1701,16 +1731,16 @@ WheelCollider:
   m_Mass: 20
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
-    m_ExtremumSlip: 0.4
-    m_ExtremumValue: 1
+    m_ExtremumSlip: 4
+    m_ExtremumValue: 6
     m_AsymptoteSlip: 0.8
     m_AsymptoteValue: 0.5
     m_Stiffness: 1
   m_SidewaysFriction:
-    m_ExtremumSlip: 0.2
-    m_ExtremumValue: 1
-    m_AsymptoteSlip: 0.5
-    m_AsymptoteValue: 0.75
+    m_ExtremumSlip: 4
+    m_ExtremumValue: 8
+    m_AsymptoteSlip: 2
+    m_AsymptoteValue: 4
     m_Stiffness: 1
   m_Enabled: 1
 --- !u!114 &2021358468
@@ -2499,7 +2529,7 @@ GameObject:
   - component: {fileID: 5935710525875556030}
   - component: {fileID: 6418810253540611077}
   - component: {fileID: 6418810253540611078}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: sedan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2519,16 +2549,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   centerOfMass: {fileID: 394218757}
-  wheelColliderLeftFront: {fileID: 2021358467}
-  wheelColliderRightFront: {fileID: 1304852927}
-  wheelColliderLeftBack: {fileID: 1845063163}
-  wheelColliderRightBack: {fileID: 1285497330}
-  wheelLeftFront: {fileID: 3870444079975253931}
-  wheelRightFront: {fileID: 6153774641276994197}
-  wheelLeftBack: {fileID: 1147661251919473741}
-  wheelRightBack: {fileID: 5214527192980275115}
   motorTorque: 300
   maxSteer: 20
+  wheels: []
 --- !u!54 &6418810253540611078
 Rigidbody:
   m_ObjectHideFlags: 0
