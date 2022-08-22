@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Platform
+  - Projectile
+  - Key
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -11,13 +15,13 @@ TagManager:
   - 
   - Water
   - UI
-  - WheelCollider
-  - Car
-  - Props
   - 
   - 
-  - 
-  - 
+  - Player
+  - Platforms
+  - Background
+  - Enemies
+  - PlayerInvincible
   - 
   - 
   - 
