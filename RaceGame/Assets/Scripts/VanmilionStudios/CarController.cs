@@ -18,6 +18,7 @@ public class CarController : MonoBehaviour
         public WheelCollider wheelCollider;
         public Axel axel;
         public GameObject wheelEffectObj;
+        public ParticleSystem smokeParticle;
     }
 
     public float maxAcceleration = 30.0f;
@@ -34,11 +35,13 @@ public class CarController : MonoBehaviour
     float steerInput;
 
     private Rigidbody carRB;
+    private CarLights carLights;
 
     private void Start()
     {
         carRB = GetComponent<Rigidbody>();
         carRB.centerOfMass = _centerOfMass;
+        carLights = GetComponent<CarLights>();
     }
 
     private void Update()
@@ -90,6 +93,9 @@ public class CarController : MonoBehaviour
             {
                 wheel.wheelCollider.brakeTorque = 300 * brakeAcceleration * Time.deltaTime;
             }
+
+            carLights.isBackLightOn = true;
+            carLights.OperateBackLights();
         }
         else
         {
@@ -97,6 +103,8 @@ public class CarController : MonoBehaviour
             {
                 wheel.wheelCollider.brakeTorque = 0;
             }
+            carLights.isBackLightOn = false;
+            carLights.OperateBackLights();
         }
     }
 
@@ -119,6 +127,7 @@ public class CarController : MonoBehaviour
             if (Input.GetKey(KeyCode.Space) && wheel.axel == Axel.Rear)
             {
                 wheel.wheelEffectObj.GetComponentInChildren<TrailRenderer>().emitting = true;
+                wheel.smokeParticle.Emit(1);
             }
             else
             {
