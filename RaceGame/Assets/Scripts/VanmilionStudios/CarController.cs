@@ -21,6 +21,8 @@ public class CarController : MonoBehaviour
         public ParticleSystem smokeParticle;
     }
 
+    public static CarController Instance;
+
     public float maxAcceleration = 30.0f;
     public float brakeAcceleration = 50.0f;
 
@@ -36,6 +38,12 @@ public class CarController : MonoBehaviour
 
     private Rigidbody carRB;
     private CarLights carLights;
+    public float carSpeed;
+
+    private void Awake() 
+    {
+        Instance = this;
+    }
 
     private void Start()
     {
@@ -49,6 +57,8 @@ public class CarController : MonoBehaviour
         GetInputs();
         AnimationWheels();
         WheelEffects();
+        
+        carSpeed = carRB.velocity.magnitude;
     }
 
     private void LateUpdate()
