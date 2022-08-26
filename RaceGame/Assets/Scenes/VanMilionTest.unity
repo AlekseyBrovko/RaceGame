@@ -4644,7 +4644,7 @@ PrefabInstance:
     - target: {fileID: 7178842896986926368, guid: 7baf992ec53f5064aac7307523476775,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.36
       objectReference: {fileID: 0}
     - target: {fileID: 7178842896986926368, guid: 7baf992ec53f5064aac7307523476775,
         type: 3}
@@ -4654,7 +4654,7 @@ PrefabInstance:
     - target: {fileID: 7178842896986926368, guid: 7baf992ec53f5064aac7307523476775,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -2.64
       objectReference: {fileID: 0}
     - target: {fileID: 7178842896986926368, guid: 7baf992ec53f5064aac7307523476775,
         type: 3}
@@ -4691,15 +4691,40 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7560293874439927702, guid: 7baf992ec53f5064aac7307523476775,
+        type: 3}
+      propertyPath: maxSpeed
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 7560293874439927703, guid: 7baf992ec53f5064aac7307523476775,
         type: 3}
       propertyPath: lightToggle
       value: 
       objectReference: {fileID: 648262513}
+    - target: {fileID: 7560293874439927705, guid: 7baf992ec53f5064aac7307523476775,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560293874439927705, guid: 7baf992ec53f5064aac7307523476775,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7560293874439927706, guid: 7baf992ec53f5064aac7307523476775,
         type: 3}
       propertyPath: m_Name
       value: sedanVanmillionD
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560293874439927707, guid: 7baf992ec53f5064aac7307523476775,
+        type: 3}
+      propertyPath: maxSpeed
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560293874439927707, guid: 7baf992ec53f5064aac7307523476775,
+        type: 3}
+      propertyPath: driveType
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7560293874439927707, guid: 7baf992ec53f5064aac7307523476775,
         type: 3}
